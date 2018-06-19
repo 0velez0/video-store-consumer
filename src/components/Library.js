@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Movie from './Movie';
+// import Status from './Status';
+
 
 const BASE_URL = 'http://www.localhost:3000';
 
@@ -19,8 +21,12 @@ class Library extends Component {
     };
   }
 
-
   componentDidMount() {
+  //   this.getMovies(BASE_URL)
+  // }
+    // getMovies(url) {
+
+
     // this.props.updateStatusCallback('Loading movies...', 'success');
 
     axios.get(BASE_URL + '/movies')
@@ -41,10 +47,7 @@ class Library extends Component {
         // Get something on the screen so the user knows
         // this.props.updateStatusCallback(error.message, 'error');
       });
-  }
-
-
-
+    }
 
   render() {
     const movies = this.state.movies.map((movie, index) => {
@@ -59,9 +62,6 @@ class Library extends Component {
 
     return (
       <section>
-        <div>
-          <h2>Library</h2>
-        </div>
         <div>{ movies }</div>
       </section>
     )

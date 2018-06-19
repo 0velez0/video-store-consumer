@@ -54,8 +54,10 @@ class App extends Component {
             <Route path="/movies" component={Library}/>
             <Route path="/customers" component={Customers}/>
           </div>
+
             <Home updateStatusCallback={this.updateStatus}/>
-        </div>
+
+          </div>
     </Router>
     );
   }
