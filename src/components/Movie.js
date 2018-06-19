@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import './Movie.css';
 
 const Movie = (props) => {
   return (
-    <div>
-    <h2>{props.title}</h2>
+    <div className="movie">
       <img src={props.image_url} alt={props.title}></img>
+      <h3>{props.title}</h3>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Movie from './Movie';
+import './Library.css';
 // import Status from './Status';
 
 
@@ -62,7 +63,7 @@ class Library extends Component {
 
     return (
       <section>
-        <div>{ movies }</div>
+        <div className="library">{ movies }</div>
       </section>
     )
   }

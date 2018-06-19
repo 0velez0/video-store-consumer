@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Customer from './Customer';
+import './Customers.css';
+
 
 const BASE_URL = 'http://www.localhost:3000';
 
@@ -67,7 +69,7 @@ class Customers extends Component {
 
     return (
       <section>
-        <div>{ customers }</div>
+        <div className="customers">{ customers }</div>
       </section>
 
     )
