@@ -9,7 +9,7 @@ h1, h2, p, ul, li {
 }
 h1 {
   text-align: center;
-  color: #280877;
+  color: white;
   font-size: 2.5em;
   font-family: Anton;
 }
@@ -41,5 +41,5 @@ ul.header li a {
   margin-bottom: 10px;
 }
 .active {
-  background-color: #0099FF;
+  background-color: #fc0;
 }

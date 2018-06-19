@@ -3,7 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   NavLink,
-  Route
+  Route 
 } from "react-router-dom";
 import Home from "./components/Home";
 import Search from "./components/Search";
