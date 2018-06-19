@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import {
-  Route,
+  BrowserRouter as Router,
   NavLink,
-  HashRouter
+  Route
 } from "react-router-dom";
 import Home from "./components/Home";
 import Search from "./components/Search";
@@ -13,7 +13,7 @@ import Customers from "./components/Customers";
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <Router>
       <div>
           <h1>VIDEO STORE</h1>
           <ul className="header">
@@ -29,7 +29,7 @@ class App extends Component {
           <Route path="/customers" component={Customers}/>
           </div>
         </div>
-        </HashRouter>
+        </Router>
     );
   }
 }
