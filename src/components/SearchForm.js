@@ -43,7 +43,7 @@ class SearchForm extends Component {
            />
         </div>
         <div>
-          <input
+          <input className="submit"
            type="submit"
            value="Search"
            />
