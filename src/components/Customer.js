@@ -7,6 +7,7 @@ const Customer = (props) => {
     <div className="customer">
       <h2>{props.name}</h2>
       <p>{props.movies_checked_out_count}</p>
+      <button>{props.buttonTitle}</button>
     </div>
   )
 }

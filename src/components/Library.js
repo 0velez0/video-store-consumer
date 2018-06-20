@@ -58,6 +58,7 @@ class Library extends Component {
         overview={movie.overview}
         release_date={movie.release_date}
         image_url={movie.image_url}
+        buttonTitle = "Select for Rental"
         />
       });
 

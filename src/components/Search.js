@@ -7,6 +7,8 @@ import Movie from './Movie';
 
 const BASE_URL = 'http://www.localhost:3000/movies?query=';
 
+const POST_URL = 'http://www.localhost:3000/movies';
+
 class Search extends Component {
   static propTypes = {
 
@@ -18,6 +20,16 @@ class Search extends Component {
     this.state = {
       results: []
     };
+  }
+
+  addToLibrary = (movie) => {
+    axios.post(POST_URL, movie)
+    .then((response) => {
+      console.log(response.data);
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
   }
 
   getInfo = (query) => {
@@ -50,6 +62,8 @@ class Search extends Component {
         overview={movie.overview}
         release_date={movie.release_date}
         image_url={movie.image_url}
+        buttonTitle = "Add to Library"
+        addToLibraryCallback={this.addToLibrary}
         />
       });
     return (
