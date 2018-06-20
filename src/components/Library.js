@@ -53,12 +53,15 @@ class Library extends Component {
   render() {
     const movies = this.state.movies.map((movie, index) => {
       console.log(movies);
+
+
       return <Movie key={index}
         title={movie.title}
         overview={movie.overview}
         release_date={movie.release_date}
         image_url={movie.image_url}
         buttonTitle = "Select for Rental"
+        callback={this.props.callback}
         />
       });
 

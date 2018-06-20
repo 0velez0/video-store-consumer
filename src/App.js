@@ -17,6 +17,8 @@ class App extends Component {
 
     this.state = {
       movies: [],
+      title: "test title",
+      customerId: "test id",
       status: {
         message: 'loaded the page',
         type: 'success'
@@ -31,6 +33,19 @@ class App extends Component {
         type: type
       }
     });
+  }
+
+  updateMovie = (movie) => {
+    console.log(`got inside of updateMovie`);
+    let updatedState = {};
+    updatedState["title"] = movie.title
+    this.setState(updatedState)
+  }
+
+  updateCustomer = (customerId) => {
+    let updatedState = {};
+    updatedState["customerId"] = customerId.name // TODO
+    this.setState(updatedState)
   }
 
   render() {
@@ -51,8 +66,14 @@ class App extends Component {
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/search" component={Search}/>
-            <Route path="/movies" component={Library}/>
-            <Route path="/customers" component={Customers}/>
+            <Route path="/movies"
+            render = {() => {
+              return (<Library callback={this.updateMovie}/>)
+            }}/>
+            <Route path="/customers"
+            render = {() => {
+              return (<Customers callback={this.updateMovie}/>)
+            }}/>
           </div>
 
             <Home updateStatusCallback={this.updateStatus}/>

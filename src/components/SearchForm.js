@@ -22,7 +22,6 @@ class SearchForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state);
     this.props.addSearchCallback(this.state);
 
     this.setState({

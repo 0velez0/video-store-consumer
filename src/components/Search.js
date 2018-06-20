@@ -25,7 +25,7 @@ class Search extends Component {
   addToLibrary = (movie) => {
     axios.post(POST_URL, movie)
     .then((response) => {
-      console.log(response.data);
+      console.log(`add to library ${movie}`);
     })
     .catch((error) => {
       console.log(error.message);
@@ -33,13 +33,9 @@ class Search extends Component {
   }
 
   getInfo = (query) => {
-    console.log(query.title);
     let url = BASE_URL +  query.title
     axios.get(url)
     .then((response) => {
-      console.log('Success!');
-      console.log(response.data);
-
       // this.props.updateStatusCallback('Successfully loaded movies!', 'success');
 
       // Do some pre-processing on the data
@@ -56,7 +52,7 @@ class Search extends Component {
 
   render() {
     const movies = this.state.results.map((movie, index) => {
-      console.log(movies);
+      // console.log(`${movie.image_url}`);
       return <Movie key={index}
         title={movie.title}
         overview={movie.overview}
