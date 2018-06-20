@@ -15,7 +15,7 @@ const Movie = (props) => {
 
   return (
     <div className="movie">
-      <img src={props.image_url} alt={props.title}></img>
+      <img src={`${props.image_url}`} alt={props.title}></img>
       <h3>{props.title}</h3>
       <h4>{props.release_date}</h4>
       <button onClick={onLibraryAdd}>{props.buttonTitle}</button>
@@ -24,7 +24,7 @@ const Movie = (props) => {
 }
 
   Movie.propTypes = {
-    
+
   };
 
 export default Movie;

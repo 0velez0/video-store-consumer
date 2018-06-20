@@ -40,6 +40,7 @@ class Library extends Component {
         // Do some pre-processing on the data
         const moviesList = response.data;
         this.setState({ movies: moviesList });
+        console.log(this.state)
       })
       .catch((error) => {
         // console.log('Error :(');
@@ -51,6 +52,7 @@ class Library extends Component {
     }
 
   render() {
+    console.log(this.props.callback);
     const movies = this.state.movies.map((movie, index) => {
       console.log(movies);
       return <Movie key={index}
