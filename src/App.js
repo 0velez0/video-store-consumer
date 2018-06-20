@@ -37,13 +37,13 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <h1>VIDEO STORE</h1>
+          <h1>D & M VIDEO STORE</h1>
 
           <ul className="header">
-            <li><NavLink exact to="/">Home</NavLink></li>
-            <li><NavLink to="/movies">Library</NavLink></li>
-            <li><NavLink to="/customers">Customers</NavLink></li>
-            <li><NavLink to="/search">Search</NavLink></li>
+            <li><NavLink exact to="/">HOME</NavLink></li>
+            <li><NavLink to="/movies">LIBRARY</NavLink></li>
+            <li><NavLink to="/customers">CUSTOMERS</NavLink></li>
+            <li><NavLink to="/search">SEARCH</NavLink></li>
           </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>
