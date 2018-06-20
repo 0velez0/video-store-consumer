@@ -38,15 +38,12 @@ class App extends Component {
       <Router>
         <div>
           <h1>VIDEO STORE</h1>
-          <Status
-            message={this.state.status.message}
-            type={this.state.status.type}
-          />
+
           <ul className="header">
             <li><NavLink exact to="/">Home</NavLink></li>
-            <li><NavLink to="/search">Search</NavLink></li>
             <li><NavLink to="/movies">Library</NavLink></li>
             <li><NavLink to="/customers">Customers</NavLink></li>
+            <li><NavLink to="/search">Search</NavLink></li>
           </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>
@@ -54,9 +51,6 @@ class App extends Component {
             <Route path="/movies" component={Library}/>
             <Route path="/customers" component={Customers}/>
           </div>
-
-            <Home updateStatusCallback={this.updateStatus}/>
-
           </div>
     </Router>
     );
