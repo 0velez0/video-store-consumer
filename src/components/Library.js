@@ -39,8 +39,9 @@ class Library extends Component {
 
         // Do some pre-processing on the data
         const moviesList = response.data;
-        this.setState({ movies: moviesList });
+        this.setState({movies: moviesList} );
       })
+
       .catch((error) => {
         // console.log('Error :(');
         console.log(error);
@@ -52,9 +53,11 @@ class Library extends Component {
 
   render() {
     const movies = this.state.movies.map((movie, index) => {
-      console.log(movies);
+      console.log(this.props.callback);
 
-
+      const callback = () => {
+        this.props.callback(movie)
+      }
       return <Movie key={index}
         title={movie.title}
         overview={movie.overview}
@@ -62,6 +65,7 @@ class Library extends Component {
         image_url={movie.image_url}
         buttonTitle = "Select for Rental"
         callback={this.props.callback}
+
         />
       });
 

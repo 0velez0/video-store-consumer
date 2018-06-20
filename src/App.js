@@ -37,7 +37,7 @@ class App extends Component {
 
   updateMovie = (movie) => {
     console.log(`got inside of updateMovie`);
-    let updatedState = {};
+    let updatedState = Object.assign({}, this.state);
     updatedState["title"] = movie.title
     this.setState(updatedState)
   }
