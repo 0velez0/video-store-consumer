@@ -13,6 +13,9 @@ h2, h3, p, ul, li {
   font-family: 'Encode Sans Semi Expanded', sans-serif;
 
 }
+h1 strong {
+  color: rgb(222,200,69);
+}
 
 h1 {
   text-align: center;
@@ -56,5 +59,20 @@ ul.header li a {
 }
 
 .active {
-  background-color: #fc0;
+  background-color: rgb(222,200,69);
+}
+
+.store-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.store-name h1 {
+  margin-left: 2em;
+}
+
+.store-name img {
+  margin-right: 10em;
 }
