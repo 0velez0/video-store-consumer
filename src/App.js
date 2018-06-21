@@ -82,7 +82,8 @@ class App extends Component {
             }}/>
             <Route path="/customers"
             render = {() => {
-              return (<Customers callbacksetSelectedCustomer={this.setSelectedCustomer}/>)
+              return (<Customers callbacksetSelectedCustomer={this.setSelectedCustomer}
+                updateStatusCallback={this.updateStatus}/>)
             }}/>
           </div>
         </div>

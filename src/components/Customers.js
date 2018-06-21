@@ -32,13 +32,13 @@ class Customers extends Component {
     // getMovies(url) {
 
 
-    // this.props.updateStatusCallback('Loading movies...', 'success');
+    this.props.updateStatusCallback('Loading customers...', 'success');
 
     axios.get(BASE_URL + '/customers')
       .then((response) => {
         console.log('Success!');
 
-        // this.props.updateStatusCallback('Successfully loaded movies!', 'success');
+        this.props.updateStatusCallback('Successfully loaded customers!', 'success');
 
         // Do some pre-processing on the data
         const customersList = response.data;
@@ -48,7 +48,7 @@ class Customers extends Component {
         // console.log('Error :(');
         console.log(error);
 
-        // this.props.updateStatusCallback(error.message, 'error');
+        this.props.updateStatusCallback(error.message, 'error');
       });
     }
 
