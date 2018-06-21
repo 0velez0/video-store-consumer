@@ -51,6 +51,7 @@ class Customers extends Component {
 
     const customers = this.state.customers.map((customer, index) => {
       return <Customer key={index}
+        id={customer.id}
         name={customer.name}
         registrated_at={customer.registrated_at}
         address={customer.address}

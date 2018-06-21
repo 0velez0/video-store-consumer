@@ -13,7 +13,7 @@ const Customer = (props) => {
     <div className="customer">
       <h2>{props.name}</h2>
       <p>{props.movies_checked_out_count}</p>
-      <button onClick={onClickCustomer} name={props.name}>{props.buttonTitle} </button>
+      <button onClick={onClickCustomer} name={props.name} id={props.id}>{props.buttonTitle} </button>
     </div>
   )
 }
@@ -22,7 +22,8 @@ const Customer = (props) => {
     callbacksetSelectedCustomer: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
     movies_checked_out_count: PropTypes.number,
-    buttonTitle: PropTypes.func 
+    buttonTitle: PropTypes.string,
+    id: PropTypes.number
   };
 
 export default Customer;
