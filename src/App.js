@@ -20,7 +20,11 @@ class App extends Component {
       status: {
         message: 'loaded the page',
         type: 'success'
-      }
+      },
+      selectedCustomerName: '',
+      selectedCustomerId: '',
+      selectedMovieTitle: '',
+      selectedMovieId: ''
     };
   }
 
@@ -33,27 +37,47 @@ class App extends Component {
     });
   }
 
-  
+  setSelectedMovie = (movie) => {
+    this.setState({
+      selectedMovieTitle: movie.title,
+      selectedMovieId: movie.id
+    })
+  }
+
+  setSelectedCustomer = (customer) => {
+    console.log(customer);
+    this.setState({
+      selectedCustomerName: customer.name,
+      selectedCustomerId: customer.id
+    })
+  }
 
   render() {
     return (
       <Router>
         <div>
-          <h1>VIDEO STORE</h1>
-
+          <h1>D & M VIDEO STORE</h1>
+            <h4>Selected Customer: {this.state.selectedCustomerName}</h4>
+            <h4>Selected Movie: {this.state.selectedMovieTitle}</h4>
           <ul className="header">
-            <li><NavLink exact to="/">Home</NavLink></li>
-            <li><NavLink to="/movies">Library</NavLink></li>
-            <li><NavLink to="/customers">Customers</NavLink></li>
-            <li><NavLink to="/search">Search</NavLink></li>
+            <li><NavLink exact to="/">HOME</NavLink></li>
+            <li><NavLink to="/movies">LIBRARY</NavLink></li>
+            <li><NavLink to="/customers">CUSTOMERS</NavLink></li>
+            <li><NavLink to="/search">SEARCH</NavLink></li>
           </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/search" component={Search}/>
-            <Route path="/movies" component={Library}/>
-            <Route path="/customers" component={Customers}/>
+            <Route path="/movies"
+            render = {() => {
+              return (<Library callbacksetSelectedMovie={this.setSelectedMovie}/>)
+            }}/>
+            <Route path="/customers"
+            render = {() => {
+              return (<Customers callbacksetSelectedCustomer={this.setSelectedCustomer}/>)
+            }}/>
           </div>
-          </div>
+        </div>
     </Router>
     );
   }

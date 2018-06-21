@@ -1,29 +1,38 @@
 * {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+
 }
+
 body {
   background-color: lightblue;
   padding: 20px;
   margin: 0;
 }
-h1, h2, h3, p, ul, li {
-  font-family: 'Abel', sans-serif;
+
+h2, h3, p, ul, li {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+
 }
+
 h1 {
   text-align: center;
   color: white;
-  font-size: 3.5em;
-  font-family: 'Abel', sans-serif;
+  font-size: 5em;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-style: bold;
 }
+
 ul.header li {
   display: inline;
   list-style-type: none;
   margin: 0;
 }
+
 ul.header {
   background-color: #111;
   padding: 0;
 }
+
 ul.header li a {
   color: #FFF;
   font-weight: bold;
@@ -31,17 +40,21 @@ ul.header li a {
   padding: 20px;
   display: inline-block;
 }
+
 .content {
   background-color: #FFF;
   padding: 20px;
 }
+
 .content h2 {
   padding: 0;
   margin: 0;
 }
+
 .content li {
   margin-bottom: 10px;
 }
+
 .active {
   background-color: #fc0;
 }
