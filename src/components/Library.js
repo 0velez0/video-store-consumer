@@ -31,12 +31,12 @@ class Library extends Component {
   // }
     // getMovies(url) {
 
-    // this.props.updateStatusCallback('Loading movies...', 'success');
+    this.props.updateStatusCallback('Loading movies...', 'success');
     axios.get(BASE_URL + '/movies')
       .then((response) => {
         console.log('Success!');
 
-        // this.props.updateStatusCallback('Successfully loaded movies!', 'success');
+        this.props.updateStatusCallback('Successfully loaded movies!', 'success');
 
         // Do some pre-processing on the data
         const moviesList = response.data;
@@ -47,7 +47,7 @@ class Library extends Component {
         console.log(error);
 
         // Get something on the screen so the user knows
-        // this.props.updateStatusCallback(error.message, 'error');
+        this.props.updateStatusCallback(error.message, 'error');
       });
     }
 
