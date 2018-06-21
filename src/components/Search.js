@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 import SearchForm from './SearchForm';
 import Movie from './Movie';
@@ -10,9 +9,6 @@ const BASE_URL = 'http://www.localhost:3000/movies?query=';
 const POST_URL = 'http://www.localhost:3000/movies';
 
 class Search extends Component {
-  static propTypes = {
-
-  };
 
   constructor() {
     super();

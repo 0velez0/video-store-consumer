@@ -22,7 +22,7 @@ const Customer = (props) => {
     callbacksetSelectedCustomer: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
     movies_checked_out_count: PropTypes.number,
-    buttonTitle: PropTypes.func // TODO
+    buttonTitle: PropTypes.func 
   };
 
 export default Customer;
