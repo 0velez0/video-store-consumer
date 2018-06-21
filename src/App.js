@@ -77,7 +77,14 @@ class App extends Component {
           />
           <div className="content">
             <Route exact path="/" component={Home}/>
-            <Route path="/search" component={Search}/>
+
+
+            <Route path="/search"
+            render = {() => {
+              return (<Search
+              updateStatusCallback={this.updateStatus}/>)
+            }}/>
+
             <Route path="/movies"
             render = {() => {
               return (<Library callbacksetSelectedMovie={this.setSelectedMovie}

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import Movie from './Movie';
 import './Library.css';
-// import Status from './Status';
 
 
 const BASE_URL = 'http://www.localhost:3000';
@@ -17,7 +16,6 @@ class Library extends Component {
   constructor() {
     super();
 
-    // Set state to the static data from props
     this.state = {
       movies: []
     };
@@ -28,7 +26,6 @@ class Library extends Component {
   }
 
   componentDidMount() {
-
     this.props.updateStatusCallback('Loading movies...', 'success');
     axios.get(BASE_URL + '/movies')
       .then((response) => {
@@ -43,7 +40,6 @@ class Library extends Component {
       .catch((error) => {
         console.log(error);
 
-        // Get something on the screen so the user knows
         this.props.updateStatusCallback(error.message, 'error');
       });
     }
