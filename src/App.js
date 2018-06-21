@@ -52,10 +52,13 @@ class App extends Component {
     })
   }
 
+  // post "/rentals/:title/check-out", to: "rentals#check_out", as: "check_out"
+
   render() {
     return (
       <Router>
         <div>
+
           <h1>D & M VIDEO STORE</h1>
             <h4>Selected Customer: {this.state.selectedCustomerName}</h4>
             <h4>Selected Movie: {this.state.selectedMovieTitle}</h4>
@@ -65,12 +68,17 @@ class App extends Component {
             <li><NavLink to="/customers">CUSTOMERS</NavLink></li>
             <li><NavLink to="/search">SEARCH</NavLink></li>
           </ul>
+          <Status
+          message={this.state.status.message}
+          type={this.state.status.type}
+          />
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/search" component={Search}/>
             <Route path="/movies"
             render = {() => {
-              return (<Library callbacksetSelectedMovie={this.setSelectedMovie}/>)
+              return (<Library callbacksetSelectedMovie={this.setSelectedMovie}
+              updateStatusCallback={this.updateStatus}/>)
             }}/>
             <Route path="/customers"
             render = {() => {
