@@ -62,8 +62,9 @@ class Search extends Component {
         overview={movie.overview}
         release_date={movie.release_date}
         image_url={movie.image_url}
+        external_id={movie.external_id}
         buttonTitle = "Add to Library"
-        addToLibraryCallback={this.addToLibrary}
+        callback={this.addToLibrary}
         />
       });
     return (

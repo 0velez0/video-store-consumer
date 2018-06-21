@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import './Movie.css';
 
 const Movie = (props) => {
-  const onLibraryAdd = () => {
+
+  const onClickMovie = (event) => {
     let movie = {
       title: props.title,
       overview: props.overview,
       release_date: props.release_date,
-      image_url: props.image_url
+      image_url: props.image_url,
+      external_id: props.external_id
     }
-    props.addToLibraryCallback(movie);
-  }
-
-  const onClickMovie = (event) => {
-    props.callbacksetSelectedMovie(event.target)
+    props.callback(movie);
   };
 
 
