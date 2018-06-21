@@ -59,7 +59,7 @@ class Library extends Component {
         release_date={movie.release_date}
         image_url={movie.image_url}
         buttonTitle = "Select for Rental"
-        callbacksetSelectedMovie={this.selectedMovie}
+        movieCallback={this.selectedMovie}
         />
 
       });
