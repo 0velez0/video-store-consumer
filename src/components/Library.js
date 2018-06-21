@@ -10,7 +10,7 @@ const BASE_URL = 'http://www.localhost:3000';
 
 class Library extends Component {
   static propTypes = {
-    updateStatusCallback: PropTypes.func
+    callbacksetSelectedMovie: PropTypes.func
   };
 
   constructor() {
