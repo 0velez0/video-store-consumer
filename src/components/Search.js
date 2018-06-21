@@ -23,6 +23,7 @@ class Search extends Component {
   }
 
   addToLibrary = (movie) => {
+    console.log(movie)
     axios.post(POST_URL, movie)
     .then((response) => {
       console.log(response.data);
@@ -63,7 +64,7 @@ class Search extends Component {
         release_date={movie.release_date}
         image_url={movie.image_url}
         buttonTitle = "Add to Library"
-        addToLibraryCallback={this.addToLibrary}
+        movieCallback={this.addToLibrary}
         />
       });
     return (

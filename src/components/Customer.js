@@ -19,7 +19,10 @@ const Customer = (props) => {
 }
 
   Customer.propTypes = {
-
+    callbacksetSelectedCustomer: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired,
+    movies_checked_out_count: PropTypes.number,
+    buttonTitle: PropTypes.func // TODO
   };
 
 export default Customer;
