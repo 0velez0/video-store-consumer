@@ -21,6 +21,11 @@ class Customers extends Component {
     };
   }
 
+  selectedCustomer = (customer) => {
+    console.log('WE ARE INSIDE CUSTOMERSSS');
+    this.props.callbacksetSelectedCustomer(customer);
+  }
+
   componentDidMount() {
   //   this.getMovies(BASE_URL)
   // }
@@ -32,7 +37,6 @@ class Customers extends Component {
     axios.get(BASE_URL + '/customers')
       .then((response) => {
         console.log('Success!');
-        console.log(response);
 
         // this.props.updateStatusCallback('Successfully loaded movies!', 'success');
 
@@ -48,11 +52,9 @@ class Customers extends Component {
       });
     }
 
-
   render() {
 
     const customers = this.state.customers.map((customer, index) => {
-      console.log(customers);
       return <Customer key={index}
         name={customer.name}
         registrated_at={customer.registrated_at}
@@ -63,7 +65,8 @@ class Customers extends Component {
         phone={customer.phone}
         account_credit={customer.account_credit}
         movies_checked_out_count={customer.movies_checked_out_count}
-        buttonTitle = "Select for Rental" // TODO
+        buttonTitle = "Select for Rental"
+        callbacksetSelectedCustomer={this.selectedCustomer}
         />
       });
 
