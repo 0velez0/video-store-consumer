@@ -16,7 +16,7 @@ class Home extends Component {
     return (
       <div>
 
-      <img src={no_returns} alt="no_returns"/>
+      <img src={no_returns} alt="no_returns" className="image"/>
       </div>
     );
   }
