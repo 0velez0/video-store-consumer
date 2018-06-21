@@ -4,29 +4,15 @@ import './Movie.css';
 
 const Movie = (props) => {
 
-  const onLibraryAdd = () => {
-    let movie = {
-      title: props.title,
-      overview: props.overview,
-      release_date: props.release_date,
-      image_url: props.image_url
-    }
-
-  }
-
   const onClickMovie = (event) => {
-    event.preventDefault();
-    console.log(props);
-
     let movie = {
       title: props.title,
       overview: props.overview,
       release_date: props.release_date,
-      image_url: props.image_url
+      image_url: props.image_url,
+      external_id: props.external_id
     }
-    
-    props.movieCallback(movie);
-    // event.target.callback
+    props.callback(movie);
   };
 
 
