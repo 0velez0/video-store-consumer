@@ -9,7 +9,7 @@ const BASE_URL = 'http://www.localhost:3000';
 
 class Customers extends Component {
   static propTypes = {
-
+    callbacksetSelectedCustomer: PropTypes.func
   };
 
   constructor() {
@@ -27,10 +27,6 @@ class Customers extends Component {
   }
 
   componentDidMount() {
-  //   this.getMovies(BASE_URL)
-  // }
-    // getMovies(url) {
-
 
     this.props.updateStatusCallback('Loading customers...', 'success');
 
@@ -45,7 +41,6 @@ class Customers extends Component {
         this.setState({ customers: customersList });
       })
       .catch((error) => {
-        // console.log('Error :(');
         console.log(error);
 
         this.props.updateStatusCallback(error.message, 'error');

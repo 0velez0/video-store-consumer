@@ -10,7 +10,8 @@ const BASE_URL = 'http://www.localhost:3000';
 
 class Library extends Component {
   static propTypes = {
-    callbacksetSelectedMovie: PropTypes.func
+    callbacksetSelectedMovie: PropTypes.func,
+    updateStatusCallback: PropTypes.func
   };
 
   constructor() {
@@ -27,9 +28,6 @@ class Library extends Component {
   }
 
   componentDidMount() {
-  //   this.getMovies(BASE_URL)
-  // }
-    // getMovies(url) {
 
     this.props.updateStatusCallback('Loading movies...', 'success');
     axios.get(BASE_URL + '/movies')
@@ -43,7 +41,6 @@ class Library extends Component {
         this.setState({ movies: moviesList });
       })
       .catch((error) => {
-        // console.log('Error :(');
         console.log(error);
 
         // Get something on the screen so the user knows

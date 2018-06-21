@@ -10,6 +10,7 @@ import Search from "./components/Search";
 import Library from "./components/Library";
 import Customers from "./components/Customers";
 import Status from './components/Status';
+import videoGif from './videoGif.gif';
 
 class App extends Component {
   constructor() {
@@ -53,13 +54,15 @@ class App extends Component {
   }
 
   // post "/rentals/:title/check-out", to: "rentals#check_out", as: "check_out"
-
+// <h1>OUR <strong>FREE </strong>VIDEO STORE</h1>
   render() {
     return (
       <Router>
-        <div>
-
-          <h1>D & M VIDEO STORE</h1>
+      <div>
+        <div className="store-name">
+          <h1><strong>D & M </strong>VIDEO STORE</h1>
+          <img src={videoGif} alt="video-gif" height="80px" width="125px" className="gif"/>
+        </div>
             <h4>Selected Customer: {this.state.selectedCustomerName}</h4>
             <h4>Selected Movie: {this.state.selectedMovieTitle}</h4>
           <ul className="header">

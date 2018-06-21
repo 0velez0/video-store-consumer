@@ -27,7 +27,13 @@ const Movie = (props) => {
 }
 
 Movie.propTypes = {
-
+  title: PropTypes.string,
+  overview: PropTypes.string,
+  image_url: PropTypes.string,
+  external_id: PropTypes.number,
+  release_date: PropTypes.string,
+  callback: PropTypes.func,
+  buttonTitle: PropTypes.string
 };
 
 export default Movie;
