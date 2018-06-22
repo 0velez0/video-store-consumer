@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 class Status extends React.Component {
   static propTypes = {
     message: PropTypes.string,

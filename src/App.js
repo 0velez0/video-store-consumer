@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import './App.css';
+import './components/Status.css';
 import {
   BrowserRouter as Router,
   NavLink,
