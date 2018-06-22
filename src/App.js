@@ -90,8 +90,10 @@ class App extends Component {
       <h1><strong>D & M </strong>VIDEO STORE</h1>
       <img src={videoGif} alt="video-gif" height="80px" width="125px" className="gif"/>
       </div>
-      <h4>Selected Customer: {this.state.selectedCustomerName}</h4>
-      <h4>Selected Movie: {this.state.selectedMovieTitle}</h4>
+      <div className="selected">
+        <h4>Selected Customer:  <span>{this.state.selectedCustomerName}</span></h4>
+        <h4>Selected Movie:  <span>{this.state.selectedMovieTitle}</span></h4>
+      </div>
       <button onClick={this.createRental} className="rental-button">CREATE RENTAL</button>
       <ul className="header">
       <li><NavLink exact to="/">HOME</NavLink></li>

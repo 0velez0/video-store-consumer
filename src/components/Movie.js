@@ -17,12 +17,17 @@ const Movie = (props) => {
 
 
   return (
-    <div className="movie">
-    <img src={`${props.image_url}`} alt={props.title}></img>
-    <h3>{props.title}</h3>
-    <h4>{props.release_date}</h4>
-    <button onClick={onClickMovie} title={props.title}>{props.buttonTitle} </button>
-    </div>
+    <section className="movie">
+    <div>
+      <img src={`${props.image_url}`} alt={props.title}></img>
+      <h3>{props.title}</h3>
+      <h4>{props.release_date}</h4>
+      <button onClick={onClickMovie} title={props.title}>{props.buttonTitle} </button>
+      </div>
+      <div className="scroll">
+        {props.overview}
+      </div>
+    </section>
   )
 }
 

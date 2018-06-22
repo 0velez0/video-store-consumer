@@ -76,3 +76,12 @@ ul.header li a {
 .store-name img {
   margin-right: 10em;
 }
+
+.selected {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 2.5fr ;
+}
+
+span {
+  color: white;
+}
