@@ -91,8 +91,8 @@ class App extends Component {
               <img src={videoGif} alt="video-gif" height="80px" width="125px" className="gif"/>
         </div>
         <div className="selected">
-          <h4>Selected Customer:        <span>{this.state.selectedCustomerName}</span></h4>
-          <h4>Selected Movie:  <span>{this.state.selectedMovieTitle}</span></h4>
+          <h4>Selected Customer: <span>{this.state.selectedCustomerName}</span></h4>
+          <h4>Selected Movie: <span>{this.state.selectedMovieTitle}</span></h4>
           <button onClick={this.createRental} className="rental-button">CREATE RENTAL</button>
         </div>
           <ul className="header">

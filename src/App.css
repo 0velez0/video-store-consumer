@@ -15,6 +15,10 @@ h2, h3, p, ul, li {
 }
 h1 strong {
   color: rgb(222,200,69);
+  text-shadow: -1px -1px black,
+                1px -1px black, 
+                -1px 1px black,
+                1px  1px black;
 }
 
 h1 {
