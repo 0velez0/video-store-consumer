@@ -87,7 +87,7 @@ class App extends Component {
       <Router>
         <div>
           <div className="store-name">
-            <h1><strong>D & M </strong>VIDEO STORE</h1>
+            <h1><strong>D&M </strong>VIDEO STORE</h1>
               <img src={videoGif} alt="video-gif" height="80px" width="125px" className="gif"/>
         </div>
         <div className="selected">

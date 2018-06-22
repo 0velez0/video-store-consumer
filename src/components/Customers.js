@@ -9,7 +9,8 @@ const BASE_URL = 'http://www.localhost:3000';
 
 class Customers extends Component {
   static propTypes = {
-    callbacksetSelectedCustomer: PropTypes.func
+    callbacksetSelectedCustomer: PropTypes.func,
+    updateStatusCallback: PropTypes.func
   };
 
   constructor() {
