@@ -22,6 +22,10 @@ class Search extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.updateStatusCallback('');
+  }
+
   addToLibrary = (movie) => {
     console.log(movie)
     axios.post(POST_URL, movie)

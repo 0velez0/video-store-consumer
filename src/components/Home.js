@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Home.css';
 import no_returns from './no_returns.jpg';
 
-
-
 class Home extends Component {
+  static propTypes = {
+    updateStatusCallback: PropTypes.func
+  };
+
   render() {
 
     return (
@@ -15,7 +18,9 @@ class Home extends Component {
     );
   }
 
+  componentDidMount() {
+    this.props.updateStatusCallback('');
+  }
 }
-
 
 export default Home;
