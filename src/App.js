@@ -93,8 +93,8 @@ class App extends Component {
         <div className="selected">
           <h4>Selected Customer:        <span>{this.state.selectedCustomerName}</span></h4>
           <h4>Selected Movie:  <span>{this.state.selectedMovieTitle}</span></h4>
-        </div>
           <button onClick={this.createRental} className="rental-button">CREATE RENTAL</button>
+        </div>
           <ul className="header">
             <li><NavLink exact to="/">HOME</NavLink></li>
             <li><NavLink to="/movies">LIBRARY</NavLink></li>
