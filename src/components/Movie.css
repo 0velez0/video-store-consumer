@@ -12,3 +12,21 @@
   text-align: center;
   background-color: rgb(240, 231, 237);
 }
+.scroll {
+  width: 250px;
+  height: 110px;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-top: solid;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  text-align: left;
+  color: rgb(66, 57, 73);
+  margin-top: 10px;
+  padding-top: 1em;
+  border-radius: 5px;
+}
+
+button {
+  margin-bottom: 10px;
+  border-bottom: solid;
+}
