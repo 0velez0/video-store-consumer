@@ -12,7 +12,7 @@ const Customer = (props) => {
   return (
     <div className="customer">
       <h2>{props.name}</h2>
-      <p>{props.movies_checked_out_count}</p>
+      <p>Rental Count: {props.movies_checked_out_count}</p>
       <button onClick={onClickCustomer} name={props.name} id={props.id}>{props.buttonTitle} </button>
     </div>
   )

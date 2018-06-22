@@ -85,49 +85,49 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <div>
-      <div className="store-name">
-      <h1><strong>D & M </strong>VIDEO STORE</h1>
-      <img src={videoGif} alt="video-gif" height="80px" width="125px" className="gif"/>
-      </div>
-      <div className="selected">
-        <h4>Selected Customer:  <span>{this.state.selectedCustomerName}</span></h4>
-        <h4>Selected Movie:  <span>{this.state.selectedMovieTitle}</span></h4>
-      </div>
-      <button onClick={this.createRental} className="rental-button">CREATE RENTAL</button>
-      <ul className="header">
-      <li><NavLink exact to="/">HOME</NavLink></li>
-      <li><NavLink to="/movies">LIBRARY</NavLink></li>
-      <li><NavLink to="/customers">CUSTOMERS</NavLink></li>
-      <li><NavLink to="/search">SEARCH</NavLink></li>
-      </ul>
-      <Status
-      message={this.state.status.message}
-      type={this.state.status.type}/>
-      <div className="content">
-      <Route exact path="/"
-      render = {() => {
-        return (<Home updateStatusCallback={this.updateStatus}/>)
-        }}/>
-      <Route exact path="/search"
-      render = {() => {
-        return (<Search updateStatusCallback={this.updateStatus}/>)
-        }}/>
-      <Route exact path="/movies"
-      render = {() => {
-        return (<Library callbacksetSelectedMovie={this.setSelectedMovie}
-          updateStatusCallback={this.updateStatus}/>)
-        }}/>
-      <Route exact path="/customers"
-      render = {() => {
-        return (<Customers callbacksetSelectedCustomer={this.setSelectedCustomer}
-          updateStatusCallback={this.updateStatus}/>)
+        <div>
+          <div className="store-name">
+            <h1><strong>D & M </strong>VIDEO STORE</h1>
+              <img src={videoGif} alt="video-gif" height="80px" width="125px" className="gif"/>
+        </div>
+        <div className="selected">
+          <h4>Selected Customer:        <span>{this.state.selectedCustomerName}</span></h4>
+          <h4>Selected Movie:  <span>{this.state.selectedMovieTitle}</span></h4>
+        </div>
+          <button onClick={this.createRental} className="rental-button">CREATE RENTAL</button>
+          <ul className="header">
+            <li><NavLink exact to="/">HOME</NavLink></li>
+            <li><NavLink to="/movies">LIBRARY</NavLink></li>
+            <li><NavLink to="/customers">CUSTOMERS</NavLink></li>
+            <li><NavLink to="/search">SEARCH</NavLink></li>
+          </ul>
+            <Status
+              message={this.state.status.message}
+              type={this.state.status.type}/>
+        <div className="content">
+          <Route exact path="/"
+            render = {() => {
+            return (<Home updateStatusCallback={this.updateStatus}/>)
             }}/>
-            </div>
-            </div>
-            </Router>
-          );
-        }
-      }
+          <Route exact path="/search"
+            render = {() => {
+            return (<Search updateStatusCallback={this.updateStatus}/>)
+            }}/>
+          <Route exact path="/movies"
+            render = {() => {
+            return (<Library callbacksetSelectedMovie={this.setSelectedMovie}
+              updateStatusCallback={this.updateStatus}/>)
+            }}/>
+          <Route exact path="/customers"
+            render = {() => {
+            return (<Customers callbacksetSelectedCustomer={this.setSelectedCustomer}
+              updateStatusCallback={this.updateStatus}/>)
+            }}/>
+        </div>
+        </div>
+      </Router>
+      );
+    }
+  }
 
-      export default App;
+  export default App;
